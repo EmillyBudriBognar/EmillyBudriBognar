@@ -11,7 +11,7 @@
   
   ---
 
-  🎓 ETEC Lauro Gomes - Técnica em Informática para Internet
+  🎓 ETEC Lauro Gomes - Técnico em Informática para Internet
 
  <div align="center">
     <img src="https://64.media.tumblr.com/2cb1077cabf41ca64126cb77a671ba49/590a3fe368398367-1d/s400x600/27a97080bf089ca3ad8fe55f173750cf9a7bb711.gifv" width="193" height="193" /> 
