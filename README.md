@@ -3,11 +3,12 @@
   <h1> Emilly Budri Bognar </h1>
   
   ---
-  
-  <a href="#">![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)</a>
+
   <a href="#">![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)</a>
   <a href="#">![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)</a>
-  <a href="#">![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)</a>
+  <a href="#">![PHP](https://img.shields.io/badge/php-4f5b93.svg?style=for-the-badge&logo=php&logoColor=white)</a>
+  <a href="#">![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)</a>
+  <a href="#">![Figma](https://img.shields.io/badge/figma-ffb8c3.svg?style=for-the-badge&logo=figma&logoColor=#0d1117)</a>
   
   ---
 
