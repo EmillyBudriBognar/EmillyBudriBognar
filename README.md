@@ -4,13 +4,40 @@
   
   ---
 
-  <a href="#">![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)</a>
-  <a href="#">![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)</a>
-  <a href="#">![PHP](https://img.shields.io/badge/php-4f5b93.svg?style=for-the-badge&logo=php&logoColor=white)</a>
-  <a href="#">![JavaScript](https://img.shields.io/badge/javascript-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=%23323330)</a>
-  <a href="#">![Figma](https://img.shields.io/badge/figma-ffb8c3.svg?style=for-the-badge&logo=figma&logoColor=#0d1117)</a>
-  <a href="#">![Bootstrap](https://img.shields.io/badge/bootstrap-%23323330.svg?style=for-the-badge&logo=bootstrap&logoColor=#)</a>
-  
+<a href="#">
+  <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
+</a>
+<a href="#">
+  <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
+</a>
+<a href="#">
+  <img src="https://img.shields.io/badge/sass-%23CC6699.svg?style=for-the-badge&logo=sass&logoColor=white" alt="SASS">
+</a>
+<a href="#">
+  <img src="https://img.shields.io/badge/javascript-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=%23323330" alt="JavaScript">
+</a>
+<a href="#">
+  <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
+</a>
+<a href="#">
+  <img src="https://img.shields.io/badge/react-%2361DAFB.svg?style=for-the-badge&logo=react&logoColor=%2320232a" alt="React">
+</a>
+<a href="#">
+  <img src="https://img.shields.io/badge/react_native-%230078D7.svg?style=for-the-badge&logo=react&logoColor=white" alt="React Native">
+</a>
+<a href="#">
+  <img src="https://img.shields.io/badge/php-%234F5B93.svg?style=for-the-badge&logo=php&logoColor=white" alt="PHP">
+</a>
+<a href="#">
+  <img src="https://img.shields.io/badge/python-%233776AB.svg?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+</a>
+<a href="#">
+  <img src="https://img.shields.io/badge/bootstrap-%237952B3.svg?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap">
+</a>
+<a href="#">
+  <img src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white" alt="Figma">
+</a>
+
   ---
 
   🎓 ETEC Lauro Gomes - Técnico em Informática para Internet
