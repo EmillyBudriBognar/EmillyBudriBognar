@@ -66,8 +66,9 @@
 </div>
 
 <p align="justify">
-  🎓 Tecnólogo em Desenvolvimento de Software Multiplataforma - FATEC Luigi Papaiz<br>
-  🎓 Técnico em Informática para Internet - ETEC Lauro Gomes
+  🎓 Tecnólogo em Desenvolvimento de Software Multiplataforma - FATEC Luigi Papaiz (2025-2027)<br>
+  🎓 Técnico em Informática para Internet - ETEC Lauro Gomes (2024)<br>
+  🎓 Profissional em Criação de Sites e Plataformas Digitais - SENAI (2022)
 </p>
 
 ---
