@@ -40,9 +40,6 @@
     <img src="https://img.shields.io/badge/react_native-%230078D7.svg?style=for-the-badge&logo=react&logoColor=white" alt="React Native">
   </a>
   <a href="#">
-    <img src="https://img.shields.io/badge/styled_components-%23DB7093.svg?style=for-the-badge&logo=styled-components&logoColor=white" alt="Styled Components">
-  </a>
-  <a href="#">
     <img src="https://img.shields.io/badge/tailwind-%2306B6D4.svg?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS">
   </a>
   <a href="#">
