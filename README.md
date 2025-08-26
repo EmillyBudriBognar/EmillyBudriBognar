@@ -10,7 +10,7 @@
   <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=ff6b8b&height=100&section=header&animation=blinking&fontSize=50&fontColor=ffffff&fontAlignY=40&stroke=ffb6c1&strokeWidth=5"/>
 
   <!-- Efeito de digitação animado com emojis -->
-  [![Typing SVG](https://readme-typing-svg.demolab.com?font=Jost+Black&size=32&duration=2500&pause=500&color=FF6B8B&center=true&vCenter=true&width=800&lines=💻+Desenvolvedora+Front-end+e+Mobile;🎨+UX+Designer+Apaixonada;🚀+Competidora+InterFatecs;✨+Criadora+de+Experiências+Digitais+Mágicas)](https://git.io/typing-svg)
+  [![Typing SVG](https://readme-typing-svg.demolab.com?font=Jost+Black&size=32&duration=2500&pause=500&color=FF6B8B&center=true&vCenter=true&width=800&lines=💻+Desenvolvedora+Front-end+e+Mobile;🎨+UX+Designer;🚀+Competidora;✨+Criadora+de+Experiências+Digitais+Mágicas)](https://git.io/typing-svg)
 
  
   <!-- Badges animados -->
@@ -28,7 +28,7 @@
 
 ---
 
-<p align="justify">👋 Olá! Sou Emilly, desenvolvedora Front-end e Mobile com uma paixão especial por UX Design. Acredito que a tecnologia deve ser não só funcional, mas também encantadora e acessível para todos. Meu foco é criar experiências digitais que conectam pessoas e impulsionam negócios de forma intuitiva e inovadora. Atualmente, estou aprimorando minhas habilidades no Tecnólogo em Desenvolvimento de Software Multiplataforma na FATEC Luigi Papaiz. Também sou competidora no InterFatecs, o segundo maior campeonato de programação do Brasil — um desafio que me motiva a crescer e superar limites todos os dias! 🚀✨</p>
+<p align="justify">✨ Mais do que escrever código, meu propósito é criar experiências digitais que façam sentido para as pessoas. Como UX Designer e Desenvolvedora Front-end/Mobile, uno sensibilidade humana e base técnica em React, JavaScript, TypeScript e React Native para transformar ideias em soluções vivas, intuitivas e acessíveis. Acredito que cada linha de código só tem valor quando nasce de empatia e se conecta a uma necessidade real, construindo jornadas fluidas que inspiram confiança e engajamento. 🚀</p>
 
 ---
 
@@ -50,7 +50,12 @@
   <a href="#"><img src="https://img.shields.io/badge/python-%233776AB.svg?style=for-the-badge&logo=python&logoColor=white" alt="Python"></a>
   <a href="#"><img src="https://img.shields.io/badge/bootstrap-%237952B3.svg?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap"></a>
   <a href="#"><img src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white" alt="Figma"></a>
+  <a href="#"><img src="https://img.shields.io/badge/liquid-%2300b4b6.svg?style=for-the-badge&logo=shopify&logoColor=white" alt="Liquid"></a>
+  <a href="#"><img src="https://img.shields.io/badge/headless%20cms-%23000000.svg?style=for-the-badge&logo=strapi&logoColor=white" alt="Headless CMS"></a>
+  <a href="#"><img src="https://img.shields.io/badge/hydrogen-%2306B6D4.svg?style=for-the-badge&logo=shopify&logoColor=white" alt="Hydrogen"></a>
+  <a href="#"><img src="https://img.shields.io/badge/weaverse-%238257E6.svg?style=for-the-badge&logo=vercel&logoColor=white" alt="Weaverse"></a>
 </p>
+
 
 ---
 
@@ -89,9 +94,21 @@
 ---
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=EmillyBudriBognar&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=dracula&locale=pt-br&hide_border=false&order=1" height="150" alt="Estatísticas de GitHub" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=EmillyBudriBognar&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=dracula&hide_border=false&order=2" height="150" alt="Linguagens mais usadas" />
+
+  <!-- Estatísticas do GitHub -->
+  <img src="https://github-readme-stats.vercel.app/api?username=EmillyBudriBognar&show_icons=true&theme=radical&include_all_commits=true&count_private=true&hide_border=true&rank_icon=github" height="160" alt="Estatísticas do GitHub" />
+
+  <!-- Linguagens mais usadas -->
+  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=EmillyBudriBognar&layout=compact&langs_count=8&theme=radical&hide_border=true" height="160" alt="Linguagens mais usadas" />
+
+  <!-- Contador de visualizações de perfil -->
+  <p align="center">
+    <br>
+    <img src="https://komarev.com/ghpvc/?username=EmillyBudriBognar&color=ff6b8b&style=for-the-badge&label=👀+Profile+Views" alt="Visualizações de Perfil" />
+  </p>
+
 </div>
+
 
 <!-- Footer animado -->
 <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=ff6b8b&height=100&section=footer&animation=blinking&fontSize=50&fontColor=ffffff&fontAlignY=65&stroke=ffb6c1&strokeWidth=5"/>
