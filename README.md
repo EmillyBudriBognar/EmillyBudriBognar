@@ -50,11 +50,11 @@
   <a href="#"><img src="https://img.shields.io/badge/python-%233776AB.svg?style=for-the-badge&logo=python&logoColor=white" alt="Python"></a>
   <a href="#"><img src="https://img.shields.io/badge/bootstrap-%237952B3.svg?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap"></a>
   <a href="#"><img src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white" alt="Figma"></a>
-  <a href="#"><img src="https://img.shields.io/badge/liquid-%2300b4b6.svg?style=for-the-badge&logo=shopify&logoColor=white" alt="Liquid"></a>
+ <!--    <a href="#"><img src="https://img.shields.io/badge/liquid-%2300b4b6.svg?style=for-the-badge&logo=shopify&logoColor=white" alt="Liquid"></a>
   <a href="#"><img src="https://img.shields.io/badge/headless%20cms-%23000000.svg?style=for-the-badge&logo=strapi&logoColor=white" alt="Headless CMS"></a>
   <a href="#"><img src="https://img.shields.io/badge/hydrogen-%2306B6D4.svg?style=for-the-badge&logo=shopify&logoColor=white" alt="Hydrogen"></a>
   <a href="#"><img src="https://img.shields.io/badge/weaverse-%238257E6.svg?style=for-the-badge&logo=vercel&logoColor=white" alt="Weaverse"></a>
-</p>
+</p> -->
 
 
 ---
