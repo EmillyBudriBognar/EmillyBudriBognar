@@ -10,7 +10,7 @@
   <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=ff6b8b&height=100&section=header&animation=blinking&fontSize=50&fontColor=ffffff&fontAlignY=40&stroke=ffb6c1&strokeWidth=5"/>
 
   <!-- Efeito de digitação animado com emojis -->
-  [![Typing SVG](https://readme-typing-svg.demolab.com?font=Jost+Black&size=32&duration=2500&pause=500&color=FF6B8B&center=true&vCenter=true&width=800&lines=💻+Desenvolvedora+Front-end+e+Mobile;🎨+UX+Designer;🚀+Competidora;✨+Criadora+de+Experiências+Digitais+Mágicas)](https://git.io/typing-svg)
+  [![Typing SVG](https://readme-typing-svg.demolab.com?font=Jost+Black&size=32&duration=2500&pause=500&color=FF6B8B&center=true&vCenter=true&width=800&lines=💻+Desenvolvedora+Front-end+e+Mobile;🎨+UX+Designer;🚀+Competidora;✨+Criadora+de+Experiências+Digitais+Premium)](https://git.io/typing-svg)
 
  
   <!-- Badges animados -->
