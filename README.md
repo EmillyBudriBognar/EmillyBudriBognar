@@ -2,7 +2,7 @@
   
   <!-- PREMIUM BANNER -->
   <a href="https://budri.com.br">
-    <img width="100%" src="https://raw.githubusercontent.com/EmillyBudriBognar/budri-porfolio/main/public/linkedin-cover.png" alt="Emilly Budri Banner" />
+    <img width="100%" src="./emilly-budri-linkedin-cover.png" alt="Emilly Budri Banner" />
   </a>
 
   <!-- TYPING SVG - PURPLE THEME -->
@@ -21,9 +21,6 @@
     <a href="https://www.linkedin.com/in/emilly-budri-bognar/" target="_blank"> 
       <img src="https://img.shields.io/badge/LinkedIn-Emilly_Budri-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=1e3a8a" alt="LinkedIn"/> 
     </a> 
-    <a href="https://www.instagram.com/emillybudri/" target="_blank"> 
-      <img src="https://img.shields.io/badge/Instagram-@emillybudri-E4405F?style=for-the-badge&logo=instagram&logoColor=white&labelColor=9f1239" alt="Instagram"/> 
-    </a> 
   </p>
 
 </div>
@@ -41,22 +38,35 @@
 ---
 
 <div align="center">
-  <h3>🛠️ Arsenal Tecnológico</h3>
-  <sub>Minha stack para construir o futuro da web</sub>
+  <h3>Stack Tecnológica</h3>
 </div>
 
-<br />
+<p align="center">
+  <!-- Linguagens -->
+  <img src="https://img.shields.io/badge/HTML5-23272d?style=for-the-badge&logo=html5&logoColor=8A2BE2" alt="HTML5">
+  <img src="https://img.shields.io/badge/CSS3-23272d?style=for-the-badge&logo=css3&logoColor=8A2BE2" alt="CSS3">
+  <img src="https://img.shields.io/badge/SCSS-23272d?style=for-the-badge&logo=sass&logoColor=8A2BE2" alt="SCSS">
+  <img src="https://img.shields.io/badge/JavaScript-23272d?style=for-the-badge&logo=javascript&logoColor=8A2BE2" alt="JavaScript">
+  <img src="https://img.shields.io/badge/TypeScript-23272d?style=for-the-badge&logo=typescript&logoColor=8A2BE2" alt="TypeScript">
+  
+  <br />
 
-<div align="center">
+  <!-- Frameworks & Libs -->
+  <img src="https://img.shields.io/badge/React-23272d?style=for-the-badge&logo=react&logoColor=8A2BE2" alt="React">
+  <img src="https://img.shields.io/badge/React_Native-23272d?style=for-the-badge&logo=react&logoColor=8A2BE2" alt="React Native">
+  <img src="https://img.shields.io/badge/Next.js-23272d?style=for-the-badge&logo=next.js&logoColor=8A2BE2" alt="Next.js">
+  <img src="https://img.shields.io/badge/Tailwind-23272d?style=for-the-badge&logo=tailwindcss&logoColor=8A2BE2" alt="Tailwind">
+  <img src="https://img.shields.io/badge/Bootstrap-23272d?style=for-the-badge&logo=bootstrap&logoColor=8A2BE2" alt="Bootstrap">
 
-| **Core** | **Design & UI** | **Ecosystem** |
-| :--- | :--- | :--- |
-| ![React](https://img.shields.io/badge/React-20232a?style=flat-square&logo=react&logoColor=61DAFB) | ![Figma](https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=figma&logoColor=white) | ![Shopify](https://img.shields.io/badge/Shopify-7AB55C?style=flat-square&logo=shopify&logoColor=white) |
-| ![Next.js](https://img.shields.io/badge/Next.js-black?style=flat-square&logo=next.js&logoColor=white) | ![Tailwind](https://img.shields.io/badge/Tailwind-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white) | ![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white) |
-| ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white) | ![Framer](https://img.shields.io/badge/Framer_Motion-0055FF?style=flat-square&logo=framer&logoColor=white) | ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white) |
-| ![React Native](https://img.shields.io/badge/React_Native-20232a?style=flat-square&logo=react&logoColor=61DAFB) | ![SASS](https://img.shields.io/badge/SASS-hotpink?style=flat-square&logo=sass&logoColor=white) | ![Liquid](https://img.shields.io/badge/Liquid-000?style=flat-square&logo=shopify&logoColor=95BF47) |
+  <br />
 
-</div>
+  <!-- Ecosistema -->
+  <img src="https://img.shields.io/badge/Shopify-23272d?style=for-the-badge&logo=shopify&logoColor=8A2BE2" alt="Shopify">
+  <img src="https://img.shields.io/badge/Liquid-23272d?style=for-the-badge&logo=shopify&logoColor=8A2BE2" alt="Liquid">
+  <img src="https://img.shields.io/badge/Hydrogen-23272d?style=for-the-badge&logo=shopify&logoColor=8A2BE2" alt="Hydrogen">
+  <img src="https://img.shields.io/badge/Weaverse-23272d?style=for-the-badge&logo=vercel&logoColor=8A2BE2" alt="Weaverse">
+  <img src="https://img.shields.io/badge/Figma-23272d?style=for-the-badge&logo=figma&logoColor=8A2BE2" alt="Figma">
+</p>
 
 <br />
 
@@ -66,15 +76,18 @@
   <h3>🎓 Base Acadêmica</h3>
 </div>
 
-<div align="center">
-  
-| Grau | Curso | Instituição | Status |
-| :---: | :--- | :--- | :---: |
-| 🎓 | **Desenvolvimento de Software Multiplataforma** | FATEC Luigi Papaiz | *2025 – 2027* |
-| 🎓 | **Técnico em Informática para Internet** | ETEC Lauro Gomes | *Concluído* |
-| 🎓 | **Criação de Sites e Plataformas Digitais** | SENAI | *Concluído* |
+<p align="center">
+  <b>Desenvolvimento de Software Multiplataforma</b> <br />
+  <i>FATEC Luigi Papaiz • 2025 – 2027</i>
+  <br /><br />
 
-</div>
+  <b>Técnico em Informática para Internet</b> <br />
+  <i>ETEC Lauro Gomes • Concluído</i>
+  <br /><br />
+
+  <b>Criação de Sites e Plataformas Digitais</b> <br />
+  <i>SENAI • Concluído</i>
+</p>
 
 ---
 
