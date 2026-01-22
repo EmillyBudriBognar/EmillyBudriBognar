@@ -1,117 +1,102 @@
 <div align="center">
   
-  <h1> ✨ Emilly Budri Bognar ✨ </h1>
-  
-</div>
+  <!-- PREMIUM BANNER -->
+  <a href="https://budri.com.br">
+    <img width="100%" src="https://raw.githubusercontent.com/EmillyBudriBognar/budri-porfolio/main/public/linkedin-cover.png" alt="Emilly Budri Banner" />
+  </a>
 
-<div align="center">
+  <!-- TYPING SVG - PURPLE THEME -->
+  <br />
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.demolab.com?font=Jost+Black&size=28&duration=3000&pause=800&color=8A2BE2&center=true&vCenter=true&width=800&lines=Digital%2C+Simples%2C+Humano+%26+Inesquecível.;Product+Designer+%26+Front-End+Developer.;Criando+experiências+que+conectam." alt="Typing SVG" />
+  </a>
 
-  <!-- Onda animada com efeito neon -->
-  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=ff6b8b&height=100&section=header&animation=blinking&fontSize=50&fontColor=ffffff&fontAlignY=40&stroke=ffb6c1&strokeWidth=5"/>
+  <br />
 
-  <!-- Efeito de digitação animado com emojis -->
-  [![Typing SVG](https://readme-typing-svg.demolab.com?font=Jost+Black&size=32&duration=2500&pause=500&color=FF6B8B&center=true&vCenter=true&width=800&lines=💻+Desenvolvedora+Front-end+e+Mobile;🎨+UX+Designer;🚀+Competidora;✨+Criadora+de+Experiências+Digitais+Premium)](https://git.io/typing-svg)
-
- 
-  <!-- Badges animados -->
+  <!-- BADGES REFINADOS (Estilo Pill/Premium) -->
   <p align="center"> 
     <a href="https://budri.com.br" target="_blank"> 
-      <img src="https://img.shields.io/badge/✨_Portfolio-FF6B8B?style=for-the-badge&logo=vercel&logoColor=white&animate=pulse" alt="Portfolio"/> 
+      <img src="https://img.shields.io/badge/Website-budri.com.br-8A2BE2?style=for-the-badge&logo=globe&logoColor=white&labelColor=2e1065" alt="Portfolio"/> 
     </a> 
     <a href="https://www.linkedin.com/in/emilly-budri-bognar/" target="_blank"> 
-      <img src="https://img.shields.io/badge/LinkedIn-%230A66C2.svg?style=for-the-badge&logo=linkedin&logoColor=white&animate=glow" alt="LinkedIn"/> 
+      <img src="https://img.shields.io/badge/LinkedIn-Emilly_Budri-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=1e3a8a" alt="LinkedIn"/> 
     </a> 
     <a href="https://www.instagram.com/emillybudri/" target="_blank"> 
-      <img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=instagram&logoColor=white&animate=glow" alt="Instagram"/> 
+      <img src="https://img.shields.io/badge/Instagram-@emillybudri-E4405F?style=for-the-badge&logo=instagram&logoColor=white&labelColor=9f1239" alt="Instagram"/> 
     </a> 
   </p>
 
----
-
-<p align="justify">✨ Mais do que escrever código, meu propósito é criar experiências digitais que façam sentido para as pessoas. Como UX Designer e Desenvolvedora Front-end/Mobile, uno sensibilidade humana e base técnica em React, JavaScript, TypeScript e React Native para transformar ideias em soluções vivas, intuitivas e acessíveis. Acredito que cada linha de código só tem valor quando nasce de empatia e se conecta a uma necessidade real, construindo jornadas fluidas que inspiram confiança e engajamento. 🚀</p>
-
----
-
-<div align="center">
-  <h3>🛠️ Tecnologias & Ferramentas</h3>
 </div>
+
+---
 
 <p align="center">
-  <!-- Linguagens -->
-  <a href="#"><img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5"></a>
-  <a href="#"><img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3"></a>
-  <a href="#"><img src="https://img.shields.io/badge/sass-%23CC6699.svg?style=for-the-badge&logo=sass&logoColor=white" alt="SASS"></a>
-  <a href="#"><img src="https://img.shields.io/badge/javascript-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=%23323330" alt="JavaScript"></a>
-  <a href="#"><img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"></a>
-  <!-- Frameworks & Bibliotecas -->
-  <a href="#"><img src="https://img.shields.io/badge/react-%2361DAFB.svg?style=for-the-badge&logo=react&logoColor=%2320232a" alt="React"></a>
-  <a href="#"><img src="https://img.shields.io/badge/react_native-%230078D7.svg?style=for-the-badge&logo=react&logoColor=white" alt="React Native"></a>
-  <a href="#"><img src="https://img.shields.io/badge/tailwind-%2306B6D4.svg?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS"></a>
-  <a href="#"><img src="https://img.shields.io/badge/bootstrap-%237952B3.svg?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap"></a>
-  <!-- Shopify & Ecossistema -->
-  <a href="#"><img src="https://img.shields.io/badge/shopify-%236ABF4B.svg?style=for-the-badge&logo=shopify&logoColor=white" alt="Shopify"></a>
-  <a href="#"><img src="https://img.shields.io/badge/liquid-%2300b4b6.svg?style=for-the-badge&logo=shopify&logoColor=white" alt="Liquid"></a>
-  <a href="#"><img src="https://img.shields.io/badge/hydrogen-%2306B6D4.svg?style=for-the-badge&logo=shopify&logoColor=white" alt="Hydrogen"></a>
-  <a href="#"><img src="https://img.shields.io/badge/weaverse-%238257E6.svg?style=for-the-badge&logo=vercel&logoColor=white" alt="Weaverse"></a>
-  <!-- Design -->
-  <a href="#"><img src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white" alt="Figma"></a>
+  <b>"Onde arte, psicologia e tecnologia se encontram para transformar o complexo em intuitivo."</b>
 </p>
-
-
----
-
-<div align="center">
-  <h3>🎓 Formação Acadêmica</h3>
-</div>
 
 <p align="justify">
-  🎓 <b>Tecnólogo em Desenvolvimento de Software Multiplataforma</b> — FATEC Luigi Papaiz (2025–2027)<br>
-  🎓 <b>Técnico em Informática para Internet</b> — ETEC Lauro Gomes (2024)<br>
-  🎓 <b>Profissional em Criação de Sites e Plataformas Digitais</b> — SENAI (2022)
+  Olá! Sou <b>Emilly Budri Bognar</b>. Mais do que escrever linhas de código ou desenhar telas, meu foco é arquitetar soluções digitais que respeitam a jornada humana. Combinando <b>UX Design de alta fidelidade</b> com <b>Engenharia Front-end robusta</b>, abordo cada projeto como um ecossistema vivo que deve inspirar confiança e engajamento.
 </p>
 
 ---
 
 <div align="center">
-  <h3>🔗 Conecte-se comigo!</h3>
+  <h3>🛠️ Arsenal Tecnológico</h3>
+  <sub>Minha stack para construir o futuro da web</sub>
 </div>
+
+<br />
+
+<div align="center">
+
+| **Core** | **Design & UI** | **Ecosystem** |
+| :--- | :--- | :--- |
+| ![React](https://img.shields.io/badge/React-20232a?style=flat-square&logo=react&logoColor=61DAFB) | ![Figma](https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=figma&logoColor=white) | ![Shopify](https://img.shields.io/badge/Shopify-7AB55C?style=flat-square&logo=shopify&logoColor=white) |
+| ![Next.js](https://img.shields.io/badge/Next.js-black?style=flat-square&logo=next.js&logoColor=white) | ![Tailwind](https://img.shields.io/badge/Tailwind-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white) | ![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white) |
+| ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white) | ![Framer](https://img.shields.io/badge/Framer_Motion-0055FF?style=flat-square&logo=framer&logoColor=white) | ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white) |
+| ![React Native](https://img.shields.io/badge/React_Native-20232a?style=flat-square&logo=react&logoColor=61DAFB) | ![SASS](https://img.shields.io/badge/SASS-hotpink?style=flat-square&logo=sass&logoColor=white) | ![Liquid](https://img.shields.io/badge/Liquid-000?style=flat-square&logo=shopify&logoColor=95BF47) |
+
+</div>
+
+<br />
+
+---
+
+<div align="center">
+  <h3>🎓 Base Acadêmica</h3>
+</div>
+
+<div align="center">
+  
+| Grau | Curso | Instituição | Status |
+| :---: | :--- | :--- | :---: |
+| 🎓 | **Desenvolvimento de Software Multiplataforma** | FATEC Luigi Papaiz | *2025 – 2027* |
+| 🎓 | **Técnico em Informática para Internet** | ETEC Lauro Gomes | *Concluído* |
+| 🎓 | **Criação de Sites e Plataformas Digitais** | SENAI | *Concluído* |
+
+</div>
+
+---
+
+<br />
+
+<div align="center">
+
+  <!-- GITHUB STATS - PURPLE THEME -->
+  <img src="https://github-readme-stats.vercel.app/api?username=EmillyBudriBognar&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true&rank_icon=github&bg_color=0d1117&title_color=a855f7&icon_color=d8b4fe&text_color=e2e8f0" height="150" alt="Stats" />
+  
+  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=EmillyBudriBognar&layout=compact&langs_count=6&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=a855f7&icon_color=d8b4fe&text_color=e2e8f0" height="150" alt="Languages" />
+
+</div>
+
+<br />
+
+---
 
 <p align="center">
-  <a href="https://budri.com.br" target="_blank"> 
-      <img src="https://img.shields.io/badge/✨_Portfolio-FF6B8B?style=for-the-badge&logo=vercel&logoColor=white&animate=pulse" alt="Portfolio"/> 
-  </a> 
-  <a href="https://www.linkedin.com/in/emilly-budri-bognar/" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-%230A66C2.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
-  </a>
-  <a href="https://www.instagram.com/emillybudri/" target="_blank">
-    <img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram">
-  </a>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=8A2BE2&height=100&section=footer&animation=fadeIn&fontSize=0" width="100%" />
 </p>
 
 <div align="center">
-  <img src="https://64.media.tumblr.com/2cb1077cabf41ca64126cb77a671ba49/590a3fe368398367-1d/s400x600/27a97080bf089ca3ad8fe55f173750cf9a7bb711.gifv" width="193" height="193" />
-</div>
-
----
-
-<div align="center">
-
-  <!-- Estatísticas do GitHub -->
-  <img src="https://github-readme-stats.vercel.app/api?username=EmillyBudriBognar&show_icons=true&theme=radical&include_all_commits=true&count_private=true&hide_border=true&rank_icon=github" height="160" alt="Estatísticas do GitHub" />
-
-  <!-- Linguagens mais usadas -->
-  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=EmillyBudriBognar&layout=compact&langs_count=8&theme=radical&hide_border=true" height="160" alt="Linguagens mais usadas" />
-
-  <!-- Contador de visualizações de perfil -->
-  <p align="center">
-    <br>
-    <img src="https://komarev.com/ghpvc/?username=EmillyBudriBognar&color=ff6b8b&style=for-the-badge&label=👀+Profile+Views" alt="Visualizações de Perfil" />
-  </p>
-
-</div>
-
-
-<!-- Footer animado -->
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=ff6b8b&height=100&section=footer&animation=blinking&fontSize=50&fontColor=ffffff&fontAlignY=65&stroke=ffb6c1&strokeWidth=5"/>
-
+  <samp>Designed with 💜 by Emilly Budri</samp>
 </div>
