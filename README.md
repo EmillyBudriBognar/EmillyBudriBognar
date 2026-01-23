@@ -73,23 +73,6 @@
 ---
 
 <div align="center">
-  <h2>🎓 Formação</h2>
-
-  <p align="center">
-    <b>Desenvolvimento de Software Multiplataforma</b><br/>
-    <i>FATEC Luigi Papaiz • 2025 — 2027</i>
-    <br/><br/>
-    <b>Técnico em Informática para Internet</b><br/>
-    <i>ETEC Lauro Gomes • Concluído</i>
-    <br/><br/>
-    <b>Criação de Sites e Plataformas Digitais</b><br/>
-    <i>SENAI • Concluído</i>
-  </p>
-</div>
-
----
-
-<div align="center">
   <h2>📊 GitHub em ação</h2>
 
   <!-- STATS LADO A LADO -->
