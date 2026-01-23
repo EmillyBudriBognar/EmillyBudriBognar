@@ -24,16 +24,17 @@
   Gosto de construir experiências que respeitam tempo, atenção e sentimento — e que ainda entregam performance e resultado.</p>
   
 <br/>
-
 <p align="center">
+  <sub>Conheça meu trabalho  &nbsp;•&nbsp;  Conecte-se comigo</sub><br/><br/>
   <a href="https://budri.com.br">
     <img src="https://img.shields.io/badge/budri.com.br-8A2BE2?style=flat-square" />
   </a>
-  &nbsp;&nbsp;
+  &nbsp;
   <a href="https://www.linkedin.com/in/emilly-budri-bognar/">
     <img src="https://img.shields.io/badge/linkedin-8A2BE2?style=flat-square" />
   </a>
 </p>
+
 
 <br clear="right"/>
 
