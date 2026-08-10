@@ -42,6 +42,21 @@ def _req(url, data=None, headers=None, bruto=False):
         return r.read().decode("utf-8", "replace") if bruto else json.load(r)
 
 
+def _meus_repos():
+    """Com token, inclui os privados. Sem token, so os publicos."""
+    base = ("https://api.github.com/user/repos?affiliation=owner&visibility=all"
+            if TOKEN else f"https://api.github.com/users/{USER}/repos?type=owner")
+    todos = []
+    for pagina in (1, 2, 3):
+        lote = _req(f"{base}&per_page=100&page={pagina}")
+        if not lote:
+            break
+        todos += lote
+        if len(lote) < 100:
+            break
+    return [r for r in todos if not r.get("fork")]
+
+
 def seguidores_e_linguagens():
     dados = {"seguidores": None, "linguagens": {}}
     try:
@@ -49,13 +64,17 @@ def seguidores_e_linguagens():
     except Exception as e:
         print("perfil indisponivel:", e)
     try:
-        repos = _req(f"https://api.github.com/users/{USER}/repos?per_page=100&type=owner&sort=pushed")
+        repos = _meus_repos()
+        # o campo "language" do repo so devolve a linguagem dominante, e o campo
+        # "size" conta imagem e asset junto. Somar os bytes de codigo repo a repo
+        # e o unico jeito de a mistura refletir o que foi mesmo escrito.
         for r in repos:
-            if r.get("fork"):
-                continue
-            lang = r.get("language")
-            if lang:
-                dados["linguagens"][lang] = dados["linguagens"].get(lang, 0) + max(r.get("size", 1), 1)
+            try:
+                for lang, bytes_ in _req(r["languages_url"]).items():
+                    dados["linguagens"][lang] = dados["linguagens"].get(lang, 0) + bytes_
+            except Exception as e:
+                print("linguagens de", r.get("name"), "indisponiveis:", e)
+        print(f"mistura calculada sobre {len(repos)} repositorios")
     except Exception as e:
         print("repositorios indisponiveis:", e)
     return dados
