@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 196" width="1000" height="196" role="img" aria-label="Vamos criar algo inesquecivel? budri.com.br, LinkedIn e emillybudribognar arroba gmail ponto com">
+  <defs>
+    <linearGradient id="fFundo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#5a1b8a"/><stop offset="46%" stop-color="#7d23cd"/><stop offset="100%" stop-color="#1e40af"/>
+    </linearGradient>
+    <radialGradient id="fGlow" cx="50%" cy="6%" r="70%">
+      <stop offset="0%" stop-color="#c25ae0" stop-opacity=".5"/><stop offset="100%" stop-color="#c25ae0" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="fAura" cx="50%" cy="50%">
+      <stop offset="0%" stop-color="#f0abfc" stop-opacity=".26"/><stop offset="100%" stop-color="#f0abfc" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="fAura2" cx="50%" cy="50%">
+      <stop offset="0%" stop-color="#5b8def" stop-opacity=".3"/><stop offset="100%" stop-color="#5b8def" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="fTitulo" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fefbff"/><stop offset="52%" stop-color="#f0abfc"/><stop offset="100%" stop-color="#93bffb"/>
+    </linearGradient>
+    <linearGradient id="fOnda" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#c9a0fd" stop-opacity=".5"/><stop offset="50%" stop-color="#f7b0d3" stop-opacity=".4"/><stop offset="100%" stop-color="#93bffb" stop-opacity=".5"/>
+    </linearGradient>
+    <linearGradient id="fBrilho" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="fCard"><rect width="1000" height="196" rx="28"/></clipPath>
+    <mask id="fBrilhoMask">
+      <rect width="1000" height="196" fill="#000"/>
+      <rect class="brilho" x="-240" y="0" width="240" height="196" fill="url(#fBrilho)"/>
+    </mask>
+    <style>
+      .onda { animation: onda 9s ease-in-out infinite alternate }
+      .onda2{ animation: onda 12s ease-in-out infinite alternate-reverse }
+      .onda3{ animation: onda 15s ease-in-out infinite alternate }
+      @keyframes onda { from{transform:translateX(-56px)} to{transform:translateX(56px)} }
+
+      .deriva  { animation: deriva 20s ease-in-out infinite alternate }
+      @keyframes deriva { from{transform:translate(0,0)} to{transform:translate(70px,16px)} }
+      .deriva2 { animation: deriva2 25s ease-in-out infinite alternate }
+      @keyframes deriva2 { from{transform:translate(0,0)} to{transform:translate(-64px,-14px)} }
+
+      .brilho { animation: brilho 6.5s ease-in-out 1s infinite }
+      @keyframes brilho { 0%{transform:translateX(0)} 48%,100%{transform:translateX(1260px)} }
+
+      .fl1 { animation: fl1 10s ease-in-out infinite }
+      .fl2 { animation: fl2 13s ease-in-out infinite }
+      @keyframes fl1 { 0%,100%{transform:translate(0,0)} 50%{transform:translate(10px,-14px)} }
+      @keyframes fl2 { 0%,100%{transform:translate(0,0)} 35%{transform:translate(-12px,-8px)} 70%{transform:translate(7px,-16px)} }
+
+      /* faiscas subindo, como brasas */
+      .faisca { animation: faisca 9s linear infinite }
+      @keyframes faisca {
+        0%   { transform:translateY(0);     opacity:0 }
+        12%  { opacity:.9 }
+        78%  { opacity:.5 }
+        100% { transform:translateY(-190px); opacity:0 }
+      }
+
+      .sobe { animation: sobe 1s cubic-bezier(.2,.7,.3,1) both }
+      .sobe2{ animation: sobe 1s cubic-bezier(.2,.7,.3,1) .14s both }
+      .sobe3{ animation: sobe 1s cubic-bezier(.2,.7,.3,1) .28s both }
+      @keyframes sobe { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:translateY(0)} }
+
+      .pulsa { animation: pulsa 3.6s ease-in-out infinite }
+      .u2{animation-delay:1.2s}.u3{animation-delay:2.4s}
+      @keyframes pulsa { 0%,100%{opacity:.4} 50%{opacity:1} }
+
+      @media (prefers-reduced-motion: reduce){ *{animation:none !important} .faisca{opacity:.5} }
+    </style>
+  </defs>
+
+  <g clip-path="url(#fCard)">
+    <rect width="1000" height="196" fill="url(#fFundo)"/>
+    <ellipse cx="500" cy="12" rx="520" ry="190" fill="url(#fGlow)"/>
+    <g class="deriva"><ellipse cx="180" cy="150" rx="260" ry="150" fill="url(#fAura)"/></g>
+    <g class="deriva2"><ellipse cx="840" cy="40" rx="250" ry="140" fill="url(#fAura2)"/></g>
+
+    <g fill="none" stroke-width="3">
+      <g class="fl1" style="animation-delay:.3s" stroke="#fefbff" opacity=".32"><circle cx="80" cy="52" r="16"/><circle cx="80" cy="52" r="8.5" stroke-width="2"/></g>
+      <g class="fl2" style="animation-delay:1.4s" stroke="#f0abfc" opacity=".5"><circle cx="928" cy="58" r="12"/><circle cx="928" cy="58" r="5.4" fill="#f0abfc" stroke="none"/></g>
+      <g class="fl1" style="animation-delay:2.1s" stroke="#93bffb" opacity=".4"><circle cx="900" cy="146" r="8"/></g>
+      <g class="fl2" style="animation-delay:.9s" stroke="#fefbff" opacity=".26"><circle cx="118" cy="142" r="9"/></g>
+    </g>
+
+    <g>
+      <g class="faisca" style="animation-delay:0s">   <circle cx="176" cy="200" r="2.2" fill="#fbe4ff"/></g>
+      <g class="faisca" style="animation-delay:2.2s"> <circle cx="344" cy="200" r="1.6" fill="#f7b0d3"/></g>
+      <g class="faisca" style="animation-delay:4.4s"> <circle cx="612" cy="200" r="2.4" fill="#c9a0fd"/></g>
+      <g class="faisca" style="animation-delay:1.1s"> <circle cx="762" cy="200" r="1.8" fill="#93bffb"/></g>
+      <g class="faisca" style="animation-delay:6.1s"> <circle cx="488" cy="200" r="1.5" fill="#fbe4ff"/></g>
+      <g class="faisca" style="animation-delay:3.3s"> <circle cx="860" cy="200" r="2" fill="#f0abfc"/></g>
+    </g>
+
+    <g fill="none" stroke="url(#fOnda)" stroke-width="1.8">
+      <path class="onda"  d="M-80 170 q120 -28 240 0 t240 0 t240 0 t240 0"/>
+      <path class="onda2" d="M-80 182 q120 -28 240 0 t240 0 t240 0 t240 0" stroke-opacity=".65"/>
+      <path class="onda3" d="M-80 192 q120 -26 240 0 t240 0 t240 0 t240 0" stroke-opacity=".4"/>
+    </g>
+
+    <g font-family="Jost, Century Gothic, Futura, Segoe UI, Arial, sans-serif" text-anchor="middle">
+      <g class="sobe">
+        <circle class="pulsa" cx="392" cy="52" r="3" fill="#f0abfc"/>
+        <text x="500" y="56" font-size="11" letter-spacing="4.5" fill="#e6cffd">PROXIMO PROJETO</text>
+        <circle class="pulsa u2" cx="608" cy="52" r="3" fill="#93bffb"/>
+      </g>
+
+      <g class="sobe2">
+        <text x="500" y="102" font-size="33" font-weight="700" letter-spacing="1.3" fill="url(#fTitulo)">VAMOS CRIAR ALGO INESQUECIVEL?</text>
+        <text x="500" y="102" font-size="33" font-weight="700" letter-spacing="1.3" fill="#ffffff" mask="url(#fBrilhoMask)">VAMOS CRIAR ALGO INESQUECIVEL?</text>
+      </g>
+
+      <g class="sobe3" font-family="SFMono-Regular, Consolas, Menlo, monospace" font-size="11" letter-spacing="1.4">
+        <rect x="228" y="124" width="150" height="30" rx="15" fill="#fefbff" fill-opacity=".14" stroke="#f0abfc" stroke-opacity=".5"/>
+        <text x="303" y="144" fill="#fbe4ff">budri.com.br</text>
+        <rect x="392" y="124" width="130" height="30" rx="15" fill="#fefbff" fill-opacity=".14" stroke="#93bffb" stroke-opacity=".5"/>
+        <text x="457" y="144" fill="#dbeafe">/in/emilly</text>
+        <rect x="536" y="124" width="236" height="30" rx="15" fill="#fefbff" fill-opacity=".14" stroke="#f7b0d3" stroke-opacity=".5"/>
+        <text x="654" y="144" fill="#fde4f1">emillybudribognar@gmail.com</text>
+      </g>
+    </g>
+
+    <rect x="1" y="1" width="998" height="194" rx="28" fill="none" stroke="#f0abfc" stroke-opacity=".3" stroke-width="2"/>
+  </g>
+</svg>

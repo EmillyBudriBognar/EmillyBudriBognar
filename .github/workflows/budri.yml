@@ -1,0 +1,43 @@
+name: 💜 Budri diária
+
+on:
+  schedule:
+    - cron: "10 9 * * *"    # 09:10 UTC — ~06:10 no horário de Brasília
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["scripts/**", ".github/workflows/budri.yml"]
+
+permissions:
+  contents: write
+
+jobs:
+  budri:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 🎨 Gerar as peças nos dois temas
+        run: python3 scripts/temas.py
+
+      - name: 🧠 Sortear a lei de UX do dia
+        working-directory: scripts
+        run: python3 leidodia.py
+
+      - name: 📊 Ler a telemetria do GitHub
+        working-directory: scripts
+        env:
+          # BUDRI_TOKEN: token pessoal (classico, escopo read:user) guardado nos
+          # secrets do repositorio. E ele que faz os commits privados entrarem na conta.
+          BUDRI_TOKEN: ${{ secrets.BUDRI_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_USER: ${{ github.repository_owner }}
+        run: python3 telemetria.py
+
+      - name: 💾 Commitar se algo mudou
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/
+          git diff --staged --quiet || git commit -m "💜 atualização diária da telemetria"
+          git push
