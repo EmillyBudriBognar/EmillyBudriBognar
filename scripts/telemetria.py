@@ -18,8 +18,10 @@ from datetime import datetime, timedelta, timezone
 import temas
 
 USER = os.environ.get("GH_USER", "EmillyBudriBognar")
-# BUDRI_TOKEN e um token pessoal (escopo read:user). So ele enxerga os commits
-# dos repositorios privados; o GITHUB_TOKEN da Action fica como reserva.
+# BUDRI_TOKEN e um token pessoal guardado nos secrets do repositorio.
+#   read:user -> os commits dos repositorios privados entram na contagem
+#   repo      -> libera o trafego real do perfil (visitas dos ultimos 14 dias)
+# Sem ele o painel ainda funciona, so com dados publicos.
 TOKEN = os.environ.get("BUDRI_TOKEN") or os.environ.get("GITHUB_TOKEN", "")
 TOKEN_PESSOAL = bool(os.environ.get("BUDRI_TOKEN"))
 BR_TZ = timezone(timedelta(hours=-3))
@@ -59,23 +61,42 @@ def seguidores_e_linguagens():
     return dados
 
 
-def acessos():
-    """Primeiro o trafego real do repo de perfil; se nao der, o contador publico."""
-    try:
-        t = _req(f"https://api.github.com/repos/{USER}/{USER}/traffic/views")
-        return t.get("count"), t.get("uniques"), "ULTIMOS 14 DIAS"
-    except Exception as e:
-        print("trafego indisponivel:", e)
+def contador_publico():
+    """O total acumulado desde sempre, lido do contador publico do perfil."""
     try:
         svg = _req(f"https://komarev.com/ghpvc/?username={USER}&base=0", bruto=True)
-        numeros = re.findall(r">\s*([\d.,]+)\s*<", svg)
-        for n in reversed(numeros):
-            limpo = n.replace(".", "").replace(",", "")
+        for texto in reversed(re.findall(r">\s*([\d.,]+)\s*<", svg)):
+            limpo = texto.replace(".", "").replace(",", "")
             if limpo.isdigit():
-                return int(limpo), None, "DESDE SEMPRE"
+                return int(limpo)
     except Exception as e:
         print("contador publico indisponivel:", e)
-    return None, None, "AGUARDANDO SINCRONIA"
+    return None
+
+
+def trafego():
+    """Visitas reais dos ultimos 14 dias. Precisa de um token com escopo repo."""
+    try:
+        t = _req(f"https://api.github.com/repos/{USER}/{USER}/traffic/views")
+        return t.get("count"), t.get("uniques")
+    except Exception as e:
+        print("trafego indisponivel:", e)
+        return None, None
+
+
+def acessos():
+    """Numero grande = total de sempre. Rodape = o detalhe recente, quando da."""
+    total = contador_publico()
+    recentes, unicos = trafego()
+    if total is None:
+        total = recentes
+    if unicos is not None:
+        rodape = f"{n(unicos)} PESSOAS EM 14 DIAS"
+    elif total is not None:
+        rodape = "DESDE SEMPRE"
+    else:
+        rodape = "AGUARDANDO SINCRONIA"
+    return total, rodape
 
 
 GQL = """
@@ -232,7 +253,7 @@ def barra_de_linguagens(linguagens):
 
 def montar():
     p = seguidores_e_linguagens()
-    vistas, unicos, janela = acessos()
+    vistas, rodape_acessos = acessos()
     cal = calendario() or calendario_por_eventos()
     privados = cal.get("privados", 0)
     commits = cal["totalContributions"] + privados
@@ -240,7 +261,6 @@ def montar():
     quadros, marcos, rotulos, (atual, melhor) = grade(cal)
     barra, legenda = barra_de_linguagens(p["linguagens"])
     carimbo = datetime.now(BR_TZ).strftime("%d.%m.%Y &#183; %Hh%M")
-    unicos_txt = f"{n(unicos)} PESSOAS" if unicos is not None else janela
 
     return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 448" width="1000" height="448" role="img" aria-label="Telemetria do GitHub de {USER}: acessos ao perfil, commits, seguidores, calendario de contribuicoes e mistura de linguagens">
   <defs>
@@ -278,7 +298,7 @@ def montar():
     </g>
 
     <g font-family="Jost, Century Gothic, Futura, Segoe UI, Arial, sans-serif">
-      {indicador(40, "ACESSOS AO PERFIL", n(vistas), unicos_txt, "#7e22ce", 0)}
+      {indicador(40, "ACESSOS AO PERFIL", n(vistas), rodape_acessos, "#7e22ce", 0)}
       {indicador(353, "COMMITS NO ANO", n(commits), rodape_commits, "#db2777", .1)}
       {indicador(666, "SEGUIDORES", n(p["seguidores"]), "NO GITHUB", "#2563eb", .2)}
 
