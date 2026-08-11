@@ -17,7 +17,7 @@ from datetime import datetime, timedelta, timezone
 
 import temas
 
-USER = os.environ.get("GH_USER", "EmillyBudriBognar")
+USER = os.environ.get("GH_USER", "emillybudri")
 # BUDRI_TOKEN e um token pessoal guardado nos secrets do repositorio.
 #   read:user -> os commits dos repositorios privados entram na contagem
 #   repo      -> libera o trafego real do perfil (visitas dos ultimos 14 dias)

@@ -6,7 +6,7 @@
 <a href="https://budri.com.br" target="_blank">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./assets/hero-dark.svg" />
-    <img src="./assets/hero.svg" alt="Emilly Budri Bognar - UX Designer, Front-End Developer e Shopify Developer" width="100%" />
+    <img src="./assets/hero.svg" alt="Emilly Budri - UX Designer, Front-End Developer e Shopify Developer" width="100%" />
   </picture>
 </a>
 
