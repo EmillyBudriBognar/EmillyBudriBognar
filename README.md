@@ -20,8 +20,6 @@
 
 </div>
 
-## ✦ Manifesto
-
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/manifesto-dark.svg" />
   <img src="./assets/manifesto.svg" alt="Na Budri não criamos apenas design, criamos experiências. O mesmo arquivo vira wireframe e vira código" width="100%" />
@@ -36,7 +34,7 @@ Atuo exatamente onde o **UX design** encontra o **desenvolvimento front-end**: a
 
 <div align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/divisor-dark.svg" /><img src="./assets/divisor.svg" alt="" width="100%" /></picture></div>
 
-## ✦ O que eu faço
+## O que eu faço?
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/servicos-dark.svg" />
@@ -47,7 +45,7 @@ Do briefing ao deploy, o projeto passa por uma pessoa só. Levanto os requisitos
 
 <div align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/divisor-dark.svg" /><img src="./assets/divisor.svg" alt="" width="100%" /></picture></div>
 
-## ✦ Ferramentas
+## Ferramentas
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/stack-dark.svg" />
@@ -56,20 +54,8 @@ Do briefing ao deploy, o projeto passa por uma pessoa só. Levanto os requisitos
 
 <div align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/divisor-dark.svg" /><img src="./assets/divisor.svg" alt="" width="100%" /></picture></div>
 
-## ✦ Lei de UX do dia
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/leidodia-dark.svg" />
-  <img src="./assets/leidodia.svg" alt="Lei de UX do dia: uma lei diferente a cada madrugada, com um desenho explicando a ideia" width="100%" />
-</picture>
-
-<div align="center">
-<sub>Atualizada automaticamente toda madrugada: uma lei de UX por dia, com um diagrama explicando a ideia</sub>
-</div>
-
-<div align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/divisor-dark.svg" /><img src="./assets/divisor.svg" alt="" width="100%" /></picture></div>
-
-## ✦ Por que trabalhar comigo
+## Por que trabalhar comigo?
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/diferenciais-dark.svg" />
@@ -78,7 +64,17 @@ Do briefing ao deploy, o projeto passa por uma pessoa só. Levanto os requisitos
 
 <div align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/divisor-dark.svg" /><img src="./assets/divisor.svg" alt="" width="100%" /></picture></div>
 
-## ✦ Telemetria
+## Lei de UX do dia
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/leidodia-dark.svg" />
+  <img src="./assets/leidodia.svg" alt="Lei de UX do dia: uma lei diferente a cada madrugada, com um desenho explicando a ideia" width="100%" />
+</picture>
+
+
+<div align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/divisor-dark.svg" /><img src="./assets/divisor.svg" alt="" width="100%" /></picture></div>
+
+## Minha atividade
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/telemetria-dark.svg" />
