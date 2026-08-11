@@ -31,10 +31,11 @@ CALOR = ["#f0e6fd", "#ddc7fb", "#c08bf5", "#9b4dee", "#7e22ce"]
 MESES = ["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez"]
 
 
-def _req(url, data=None, headers=None, bruto=False):
+def _req(url, data=None, headers=None, bruto=False, token=None):
     hdrs = {"User-Agent": "budri-readme", "Accept": "application/vnd.github+json"}
-    if TOKEN:
-        hdrs["Authorization"] = f"Bearer {TOKEN}"
+    usar = TOKEN if token is None else token
+    if usar:
+        hdrs["Authorization"] = f"Bearer {usar}"
     hdrs.update(headers or {})
     corpo = json.dumps(data).encode() if data else None
     req = urllib.request.Request(url, data=corpo, headers=hdrs)
@@ -100,17 +101,35 @@ def acessos():
     except Exception as e:
         print("acessos.json ilegivel:", e)
 
+    # o caminho vem do proprio contexto da Action, entao renomear o repositorio
+    # nao quebra nada; localmente cai no palpite usuario/usuario
+    caminho = os.environ.get("GITHUB_REPOSITORY") or f"{USER}/{USER}"
+    tentativas = [("BUDRI_TOKEN", os.environ.get("BUDRI_TOKEN")),
+                  ("GITHUB_TOKEN", os.environ.get("GITHUB_TOKEN"))]
+
     unicos = None
-    try:
-        t = _req(f"https://api.github.com/repos/{USER}/{USER}/traffic/views")
-        unicos = t.get("uniques")
-        for dia in t.get("views", []):
-            registro["dias"][dia["timestamp"][:10]] = dia["count"]
-        with io.open(ARQUIVO_ACESSOS, "w", encoding="utf-8") as f:
-            json.dump(registro, f, ensure_ascii=False, indent=2, sort_keys=True)
-        print(f"trafego: {len(t.get('views', []))} dias gravados")
-    except Exception as e:
-        print("trafego indisponivel (precisa de token com escopo repo):", e)
+    for nome, tok in tentativas:
+        if not tok:
+            continue
+        try:
+            t = _req(f"https://api.github.com/repos/{caminho}/traffic/views", token=tok)
+            unicos = t.get("uniques")
+            for dia in t.get("views", []):
+                registro["dias"][dia["timestamp"][:10]] = dia["count"]
+            with io.open(ARQUIVO_ACESSOS, "w", encoding="utf-8") as f:
+                json.dump(registro, f, ensure_ascii=False, indent=2, sort_keys=True)
+            print(f"trafego lido com {nome}: {len(t.get('views', []))} dias gravados")
+            break
+        except urllib.error.HTTPError as e:
+            recado = {403: "o token nao tem permissao de leitura de trafego",
+                      404: "o token nao enxerga o repositorio " + caminho,
+                      401: "o token e invalido ou expirou"}.get(e.code, "erro inesperado")
+            print(f"trafego negado com {nome}: HTTP {e.code} - {recado}")
+        except Exception as e:
+            print(f"trafego falhou com {nome}:", e)
+    else:
+        if unicos is None:
+            print("nenhum token conseguiu ler o trafego; os acessos ficam no total ja acumulado")
 
     total = registro["herdado"] + sum(registro["dias"].values())
     rodape = f"{n(unicos)} PESSOAS EM 14 DIAS" if unicos is not None else "DESDE SEMPRE"

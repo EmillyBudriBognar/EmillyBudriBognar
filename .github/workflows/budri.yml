@@ -10,6 +10,7 @@ on:
 
 permissions:
   contents: write
+  administration: read   # necessária para ler o tráfego do repositório
 
 jobs:
   budri:
