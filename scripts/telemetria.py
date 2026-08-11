@@ -276,12 +276,12 @@ def montar():
     cal = calendario() or calendario_por_eventos()
     privados = cal.get("privados", 0)
     commits = cal["totalContributions"] + privados
-    rodape_commits = "PUBLICOS + PRIVADOS" if (privados or TOKEN_PESSOAL) else "ULTIMOS 12 MESES"
+    rodape_commits = "PÚBLICOS + PRIVADOS" if (privados or TOKEN_PESSOAL) else "ÚLTIMOS 12 MESES"
     quadros, marcos, rotulos, (atual, melhor) = grade(cal)
     barra, legenda = barra_de_linguagens(p["linguagens"])
     carimbo = datetime.now(BR_TZ).strftime("%d.%m.%Y &#183; %Hh%M")
 
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 448" width="1000" height="448" role="img" aria-label="Telemetria do GitHub de {USER}: acessos ao perfil, commits, seguidores, calendario de contribuicoes e mistura de linguagens">
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 448" width="1000" height="448" role="img" aria-label="Telemetria do GitHub de {USER}: acessos ao perfil, commits, seguidores, calendário de contribuições e mistura de linguagens">
   <defs>
     <linearGradient id="teFundo" x1="0" y1="0" x2="0.8" y2="1">
       <stop offset="0%" stop-color="#fffdff"/><stop offset="55%" stop-color="#faf5ff"/><stop offset="100%" stop-color="#f3e8ff"/>
@@ -321,8 +321,8 @@ def montar():
       {indicador(353, "COMMITS NO ANO", n(commits), rodape_commits, "#db2777", .1)}
       {indicador(666, "SEGUIDORES", n(p["seguidores"]), "NO GITHUB", "#2563eb", .2)}
 
-      <text x="76" y="158" font-size="9.5" letter-spacing="2.4" fill="#7e22ce">CALENDARIO DE CONTRIBUICOES</text>
-      <text x="956" y="158" font-size="10" letter-spacing="1.2" text-anchor="end" fill="#4b5563" font-family="SFMono-Regular, Consolas, Menlo, monospace">sequencia {n(atual)}d &#183; recorde {n(melhor)}d</text>
+      <text x="76" y="158" font-size="9.5" letter-spacing="2.4" fill="#7e22ce">CALENDÁRIO DE CONTRIBUIÇÕES</text>
+      <text x="956" y="158" font-size="10" letter-spacing="1.2" text-anchor="end" fill="#4b5563" font-family="SFMono-Regular, Consolas, Menlo, monospace">sequência {n(atual)}d &#183; recorde {n(melhor)}d</text>
       {marcos}{rotulos}{quadros}
 
       <text x="76" y="330" font-size="9.5" letter-spacing="2.4" fill="#2563eb">MISTURA DE LINGUAGENS</text>

@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 196" width="1000" height="196" role="img" aria-label="Vamos criar algo inesquecivel juntos? budri.com.br, linkedin barra in barra emilly-budri-bognar e emillybudribognar arroba gmail ponto com">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 196" width="1000" height="196" role="img" aria-label="Vamos criar algo inesquecível juntos? budri.com.br, linkedin barra in barra emilly-budri-bognar e emillybudribognar arroba gmail ponto com">
   <defs>
     <linearGradient id="fFundo" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#5a1b8a"/><stop offset="46%" stop-color="#7d23cd"/><stop offset="100%" stop-color="#1e40af"/>
@@ -100,7 +100,7 @@
     <g font-family="Jost, Century Gothic, Futura, Segoe UI, Arial, sans-serif" text-anchor="middle">
       <g class="sobe">
         <circle class="pulsa" cx="392" cy="52" r="3" fill="#f0abfc"/>
-        <text x="500" y="56" font-size="11" letter-spacing="4.5" fill="#e6cffd">PROXIMO PROJETO</text>
+        <text x="500" y="56" font-size="11" letter-spacing="4.5" fill="#e6cffd">PRÓXIMO PROJETO</text>
         <circle class="pulsa u2" cx="608" cy="52" r="3" fill="#93bffb"/>
       </g>
 

@@ -54,6 +54,10 @@ Do briefing ao deploy, o projeto passa por uma pessoa só. Levanto os requisitos
   <img src="./assets/stack.svg" alt="Ferramentas: Figma, Design Systems, HTML5, CSS3, SCSS, JavaScript, TypeScript, Liquid, GraphQL, React, Next.js, Remix, React Native, Tailwind, NativeWind, Bootstrap, Shopify, Hydrogen, Weaverse, GSAP, Three.js, n8n, IA, Git e Vercel" width="100%" />
 </picture>
 
+<div align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/divisor-dark.svg" /><img src="./assets/divisor.svg" alt="" width="100%" /></picture></div>
+
+## ✦ Lei de UX do dia
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/leidodia-dark.svg" />
   <img src="./assets/leidodia.svg" alt="Lei de UX do dia: uma lei diferente a cada madrugada, com um desenho explicando a ideia" width="100%" />

@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 248" width="1000" height="248" role="img" aria-label="Lei de UX do dia 10.08.2026: REGRA DO PICO-FIM. A lembranca de uma experiencia nao e a media dela. E o momento mais intenso somado ao final. Capriche na confirmacao do pedido, e nao so no formulario.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 248" width="1000" height="248" role="img" aria-label="Lei de UX do dia 10.08.2026: REGRA DO PICO-FIM. A lembrança de uma experiência não é a média dela. É o momento mais intenso somado ao final. Capriche na confirmação do pedido, e não só no formulário.">
   <defs>
     <linearGradient id="lFundo" x1="0" y1="0" x2="0.8" y2="1">
       <stop offset="0%" stop-color="#251749"/><stop offset="55%" stop-color="#150b28"/><stop offset="100%" stop-color="#1e1039"/>
@@ -45,7 +45,7 @@
       </g>
       <text class="sobe s2" x="38" y="104" font-size="30" font-weight="700" letter-spacing="1.2" fill="#f7f5ff">REGRA DO PICO-FIM</text>
       <rect class="sobe s3" x="40" y="118" width="80" height="4" rx="2" fill="url(#lRegua)"/>
-      <g class="sobe s3"><text x="40" y="146" font-size="12.5" fill="#b8b0d6">A lembranca de uma experiencia nao e a media dela.</text><text x="40" y="167" font-size="12.5" fill="#b8b0d6">E o momento mais intenso somado ao final. Capriche na</text><text x="40" y="188" font-size="12.5" fill="#b8b0d6">confirmacao do pedido, e nao so no formulario.</text></g>
+      <g class="sobe s3"><text x="40" y="146" font-size="12.5" fill="#b8b0d6">A lembrança de uma experiência não é a média dela.</text><text x="40" y="167" font-size="12.5" fill="#b8b0d6">É o momento mais intenso somado ao final. Capriche na</text><text x="40" y="188" font-size="12.5" fill="#b8b0d6">confirmação do pedido, e não só no formulário.</text></g>
       <text class="sobe s4" x="40" y="216" font-size="9" letter-spacing="1.4" fill="#8d85ac" font-family="SFMono-Regular, Consolas, Menlo, monospace">ATUALIZADA AUTOMATICAMENTE TODA MADRUGADA &#183; UMA LEI DIFERENTE POR DIA</text>
 
       <g class="sobe s4">
@@ -62,7 +62,7 @@
   <circle cx="300" cy="62" r="6" fill="#f472b6"/>
   <text x="124" y="30" font-size="9" letter-spacing="1.4" text-anchor="middle" fill="#f472b6">PICO</text>
   <text x="300" y="50" font-size="9" letter-spacing="1.4" text-anchor="middle" fill="#f472b6">FIM</text>
-  <text x="200" y="152" font-size="9" letter-spacing="1.4" text-anchor="middle" fill="#b8b0d6">O MEIO QUASE NAO CONTA</text>
+  <text x="200" y="152" font-size="9" letter-spacing="1.4" text-anchor="middle" fill="#b8b0d6">O MEIO QUASE NÃO CONTA</text>
 </g></g>
       </g>
     </g>

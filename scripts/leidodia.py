@@ -43,7 +43,7 @@ HICK = f"""
   {''.join(pilula(214, 22 + i * 19, 116, 13, SUAVE, 'none', .8) for i in range(6))}
   <rect class="barra" x="24" y="140" width="44" height="7" rx="3.5" fill="{ROXO}"/>
   <rect class="barra b2" x="214" y="140" width="116" height="7" rx="3.5" fill="{ROSA}"/>
-  <text x="82" y="164" font-size="9" letter-spacing="1.4" text-anchor="middle" fill="{ROXO}">DECIDE RAPIDO</text>
+  <text x="82" y="164" font-size="9" letter-spacing="1.4" text-anchor="middle" fill="{ROXO}">DECIDE RÁPIDO</text>
   <text x="272" y="164" font-size="9" letter-spacing="1.4" text-anchor="middle" fill="{ROSA}">TRAVA</text>
 """
 
@@ -77,7 +77,7 @@ MILLER = f"""
       <path d="M24 138 v6 h64 v-6"/><path d="M132 138 v6 h98 v-6"/><path d="M274 138 v6 h64 v-6"/>
     </g>
   </g>
-  <text x="180" y="162" font-size="9" letter-spacing="1.4" text-anchor="middle" fill="{ROXO}">TRES GRUPOS</text>
+  <text x="180" y="162" font-size="9" letter-spacing="1.4" text-anchor="middle" fill="{ROXO}">TRÊS GRUPOS</text>
 """
 
 VON_RESTORFF = f"""
@@ -113,7 +113,7 @@ PICO_FIM = f"""
   <circle cx="300" cy="62" r="6" fill="{ROSA}"/>
   <text x="124" y="30" font-size="9" letter-spacing="1.4" text-anchor="middle" fill="{ROSA}">PICO</text>
   <text x="300" y="50" font-size="9" letter-spacing="1.4" text-anchor="middle" fill="{ROSA}">FIM</text>
-  <text x="200" y="152" font-size="9" letter-spacing="1.4" text-anchor="middle" fill="{SUAVE}">O MEIO QUASE NAO CONTA</text>
+  <text x="200" y="152" font-size="9" letter-spacing="1.4" text-anchor="middle" fill="{SUAVE}">O MEIO QUASE NÃO CONTA</text>
 """
 
 PROXIMIDADE = f"""
@@ -126,42 +126,42 @@ PROXIMIDADE = f"""
   </g>
   <circle cx="272" cy="82" r="52" fill="none" stroke="{AZUL}" stroke-width="1.6" stroke-dasharray="5 5" opacity=".6"/>
   <text x="180" y="88" font-size="22" font-weight="700" text-anchor="middle" fill="{SUAVE}" opacity=".45">|</text>
-  <text x="180" y="156" font-size="9" letter-spacing="1.4" text-anchor="middle" fill="{SUAVE}">DOIS GRUPOS, SEM PRECISAR DE TITULO</text>
+  <text x="180" y="156" font-size="9" letter-spacing="1.4" text-anchor="middle" fill="{SUAVE}">DOIS GRUPOS, SEM PRECISAR DE TÍTULO</text>
 """
 
 LEIS = [
     ("LEI DE FITTS",
-     ["Quanto maior e mais perto o alvo, mais rapido a mao chega nele.",
-      "Botao importante nao merece ser pequeno nem ficar escondido",
-      "num canto que ninguem alcanca."], FITTS),
+     ["Quanto maior e mais perto o alvo, mais rápido a mão chega nele.",
+      "Botão importante não merece ser pequeno nem ficar escondido",
+      "num canto que ninguém alcança."], FITTS),
     ("LEI DE HICK",
-     ["Cada opcao a mais na tela e um segundo a mais de decisao.",
-      "Menu enxuto nao e menu pobre: e menu que respeita o tempo",
-      "de quem esta do outro lado."], HICK),
+     ["Cada opção a mais na tela é um segundo a mais de decisão.",
+      "Menu enxuto não é menu pobre: é menu que respeita o tempo",
+      "de quem está do outro lado."], HICK),
     ("LEI DE JAKOB",
      ["As pessoas passam a maior parte do tempo em outros sites.",
       "Elas esperam que o seu funcione igual. Originalidade fica",
-      "na identidade visual, nao no lugar do carrinho."], JAKOB),
+      "na identidade visual, não no lugar do carrinho."], JAKOB),
     ("LEI DE MILLER",
-     ["A memoria de trabalho segura mais ou menos sete coisas.",
-      "Agrupar e o truque: tres blocos de dois cansam menos",
+     ["A memória de trabalho segura mais ou menos sete coisas.",
+      "Agrupar é o truque: três blocos de dois cansam menos",
       "que sete itens soltos na mesma lista."], MILLER),
     ("EFEITO VON RESTORFF",
-     ["O item diferente do resto e o unico que fica na memoria.",
-      "Se tudo esta em destaque, nada esta. Escolha um botao",
+     ["O item diferente do resto é o único que fica na memória.",
+      "Se tudo está em destaque, nada está. Escolha um botão",
       "para gritar e deixe os outros sussurrarem."], VON_RESTORFF),
     ("EFEITO ZEIGARNIK",
-     ["Tarefa comecada incomoda ate terminar.",
-      "Mostrar o progresso nao e enfeite: e o que faz a pessoa",
+     ["Tarefa começada incomoda até terminar.",
+      "Mostrar o progresso não é enfeite: é o que faz a pessoa",
       "voltar para fechar o que ficou pela metade."], ZEIGARNIK),
     ("REGRA DO PICO-FIM",
-     ["A lembranca de uma experiencia nao e a media dela.",
-      "E o momento mais intenso somado ao final. Capriche na",
-      "confirmacao do pedido, e nao so no formulario."], PICO_FIM),
+     ["A lembrança de uma experiência não é a média dela.",
+      "É o momento mais intenso somado ao final. Capriche na",
+      "confirmação do pedido, e não só no formulário."], PICO_FIM),
     ("LEI DA PROXIMIDADE",
-     ["O que esta perto parece do mesmo grupo, mesmo sem titulo.",
-      "Antes de desenhar mais uma linha divisoria, tente",
-      "so mexer no espacamento."], PROXIMIDADE),
+     ["O que está perto parece do mesmo grupo, mesmo sem título.",
+      "Antes de desenhar mais uma linha divisória, tente",
+      "só mexer no espaçamento."], PROXIMIDADE),
 ]
 
 
