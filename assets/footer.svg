@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 196" width="1000" height="196" role="img" aria-label="Vamos criar algo inesquecível juntos? budri.com.br, linkedin barra in barra emilly-budri-bognar e emillybudribognar arroba gmail ponto com">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 196" width="1000" height="196" role="img" aria-label="Vamos criar algo inesquecível juntos? budri.com.br, linkedin barra in barra emillybudri e emillybudribognar arroba gmail ponto com">
   <defs>
     <linearGradient id="fFundo" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#5a1b8a"/><stop offset="46%" stop-color="#7d23cd"/><stop offset="100%" stop-color="#1e40af"/>
@@ -110,12 +110,12 @@
       </g>
 
       <g class="sobe3" font-family="SFMono-Regular, Consolas, Menlo, monospace" font-size="11" letter-spacing="1.4">
-        <rect x="179" y="124" width="140" height="30" rx="15" fill="#fefbff" fill-opacity=".14" stroke="#f0abfc" stroke-opacity=".5"/>
-        <text x="249" y="144" fill="#fbe4ff">budri.com.br</text>
-        <rect x="333" y="124" width="228" height="30" rx="15" fill="#fefbff" fill-opacity=".14" stroke="#93bffb" stroke-opacity=".5"/>
-        <text x="447" y="144" fill="#dbeafe">/in/emilly-budri-bognar/</text>
-        <rect x="575" y="124" width="246" height="30" rx="15" fill="#fefbff" fill-opacity=".14" stroke="#f7b0d3" stroke-opacity=".5"/>
-        <text x="698" y="144" fill="#fde4f1">emillybudribognar@gmail.com</text>
+        <rect x="212" y="124" width="140" height="30" rx="15" fill="#fefbff" fill-opacity=".14" stroke="#f0abfc" stroke-opacity=".5"/>
+        <text x="282" y="144" fill="#fbe4ff">budri.com.br</text>
+        <rect x="366" y="124" width="163" height="30" rx="15" fill="#fefbff" fill-opacity=".14" stroke="#93bffb" stroke-opacity=".5"/>
+        <text x="447" y="144" fill="#dbeafe">/in/emillybudri/</text>
+        <rect x="543" y="124" width="246" height="30" rx="15" fill="#fefbff" fill-opacity=".14" stroke="#f7b0d3" stroke-opacity=".5"/>
+        <text x="666" y="144" fill="#fde4f1">emillybudribognar@gmail.com</text>
       </g>
     </g>
 

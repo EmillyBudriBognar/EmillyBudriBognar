@@ -13,7 +13,7 @@
 <br/>
 
 [![Site](https://img.shields.io/badge/budri.com.br-9333EA?style=for-the-badge)](https://budri.com.br)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-1E40AF?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/emilly-budri-bognar/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-1E40AF?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/emillybudri/)
 [![Email](https://img.shields.io/badge/Vamos_conversar-DB2777?style=for-the-badge&logo=gmail&logoColor=white)](mailto:emillybudribognar@gmail.com)
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="./assets/divisor-dark.svg" /><img src="./assets/divisor.svg" alt="" width="100%" /></picture>
