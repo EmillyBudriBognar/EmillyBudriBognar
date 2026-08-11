@@ -7,9 +7,9 @@ e a mistura de linguagens. Sem servico de terceiros para desenhar nada -
 so a biblioteca padrao do Python.
 """
 
+import io
 import json
 import os
-import re
 import urllib.error
 import urllib.request
 from collections import OrderedDict
@@ -80,42 +80,41 @@ def seguidores_e_linguagens():
     return dados
 
 
-def contador_publico():
-    """O total acumulado desde sempre, lido do contador publico do perfil."""
-    try:
-        svg = _req(f"https://komarev.com/ghpvc/?username={USER}&base=0", bruto=True)
-        for texto in reversed(re.findall(r">\s*([\d.,]+)\s*<", svg)):
-            limpo = texto.replace(".", "").replace(",", "")
-            if limpo.isdigit():
-                return int(limpo)
-    except Exception as e:
-        print("contador publico indisponivel:", e)
-    return None
-
-
-def trafego():
-    """Visitas reais dos ultimos 14 dias. Precisa de um token com escopo repo."""
-    try:
-        t = _req(f"https://api.github.com/repos/{USER}/{USER}/traffic/views")
-        return t.get("count"), t.get("uniques")
-    except Exception as e:
-        print("trafego indisponivel:", e)
-        return None, None
+ARQUIVO_ACESSOS = os.path.join(os.path.dirname(os.path.abspath(__file__)), "acessos.json")
 
 
 def acessos():
-    """Numero grande = total de sempre. Rodape = o detalhe recente, quando da."""
-    total = contador_publico()
-    recentes, unicos = trafego()
-    if total is None:
-        total = recentes
-    if unicos is not None:
-        rodape = f"{n(unicos)} PESSOAS EM 14 DIAS"
-    elif total is not None:
-        rodape = "DESDE SEMPRE"
-    else:
-        rodape = "AGUARDANDO SINCRONIA"
-    return total, rodape
+    """Acessos ao perfil, acumulados dia a dia a partir do trafego do GitHub.
+
+    A API so devolve os ultimos 14 dias, entao cada execucao grava as contagens
+    por data em acessos.json. Guardar por data torna a soma idempotente: como as
+    janelas de dias diferentes se sobrepoem, regravar a mesma data nao conta duas
+    vezes. O campo "herdado" carrega o total acumulado antes da troca de usuario.
+    """
+    registro = {"herdado": 0, "dias": {}}
+    try:
+        with io.open(ARQUIVO_ACESSOS, encoding="utf-8") as f:
+            registro.update(json.load(f))
+    except FileNotFoundError:
+        print("acessos.json ainda nao existe, comecando do zero")
+    except Exception as e:
+        print("acessos.json ilegivel:", e)
+
+    unicos = None
+    try:
+        t = _req(f"https://api.github.com/repos/{USER}/{USER}/traffic/views")
+        unicos = t.get("uniques")
+        for dia in t.get("views", []):
+            registro["dias"][dia["timestamp"][:10]] = dia["count"]
+        with io.open(ARQUIVO_ACESSOS, "w", encoding="utf-8") as f:
+            json.dump(registro, f, ensure_ascii=False, indent=2, sort_keys=True)
+        print(f"trafego: {len(t.get('views', []))} dias gravados")
+    except Exception as e:
+        print("trafego indisponivel (precisa de token com escopo repo):", e)
+
+    total = registro["herdado"] + sum(registro["dias"].values())
+    rodape = f"{n(unicos)} PESSOAS EM 14 DIAS" if unicos is not None else "DESDE SEMPRE"
+    return (total or None), rodape
 
 
 GQL = """
