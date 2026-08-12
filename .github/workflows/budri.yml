@@ -10,7 +10,6 @@ on:
 
 permissions:
   contents: write
-  administration: read   # necessária para ler o tráfego do repositório
 
 jobs:
   budri:
@@ -28,9 +27,11 @@ jobs:
       - name: 📊 Ler a telemetria do GitHub
         working-directory: scripts
         env:
-          # BUDRI_TOKEN: token pessoal classico guardado nos secrets do repositorio.
-          # read:user faz os commits privados entrarem na conta; repo libera o
-          # trafego real do perfil. Sem ele o painel roda so com dados publicos.
+          # BUDRI_TOKEN: token pessoal classico, nos secrets do repositorio.
+          #   read:user -> commits dos repositorios privados entram na conta
+          #   repo      -> unica forma de ler o trafego; o GITHUB_TOKEN da Action
+          #                nao alcanca esse endpoint, nao existe permissao de
+          #                workflow que libere.
           BUDRI_TOKEN: ${{ secrets.BUDRI_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_USER: ${{ github.repository_owner }}

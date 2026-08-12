@@ -20,7 +20,9 @@ import temas
 USER = os.environ.get("GH_USER", "emillybudri")
 # BUDRI_TOKEN e um token pessoal guardado nos secrets do repositorio.
 #   read:user -> os commits dos repositorios privados entram na contagem
-#   repo      -> libera o trafego real do perfil (visitas dos ultimos 14 dias)
+#   repo      -> libera o trafego real do perfil (visitas dos ultimos 14 dias).
+#                so um token pessoal alcanca esse endpoint: o GITHUB_TOKEN da
+#                Action nao tem como, nao existe permissao de workflow para ele.
 # Sem ele o painel ainda funciona, so com dados publicos.
 TOKEN = os.environ.get("BUDRI_TOKEN") or os.environ.get("GITHUB_TOKEN", "")
 TOKEN_PESSOAL = bool(os.environ.get("BUDRI_TOKEN"))
