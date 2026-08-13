@@ -2,9 +2,10 @@
 """Gera assets/leidodia.svg - a Lei de UX do Dia.
 
 Toda madrugada o painel troca de lei: nome, explicacao em uma frase e um
-diagrama desenhado a mao que mostra a ideia funcionando. A escolha vem da
-data (semente deterministica), entao o mesmo dia mostra sempre a mesma lei
-em qualquer maquina. Sem API, sem dependencia externa.
+diagrama desenhado a mao que mostra a ideia funcionando. A escolha e uma
+rotacao fixa pela data: nenhuma lei repete antes de todas terem aparecido,
+e o ciclo inteiro leva tantos dias quanto o tamanho da lista.
+Sem API, sem dependencia externa.
 """
 
 from datetime import datetime, timedelta, timezone
@@ -14,6 +15,7 @@ import temas
 BR_TZ = timezone(timedelta(hours=-3))
 
 ROXO, AZUL, ROSA, TINTA, SUAVE, LINHA = "#7e22ce", "#2563eb", "#db2777", "#111827", "#4b5563", "#e9d5ff"
+VERDE = "#16a34a"
 
 
 def pilula(x, y, w, h, cor=LINHA, fill="none", op=1):
@@ -129,52 +131,248 @@ PROXIMIDADE = f"""
   <text x="180" y="156" font-size="9" letter-spacing="1.4" text-anchor="middle" fill="{SUAVE}">DOIS GRUPOS, SEM PRECISAR DE TÍTULO</text>
 """
 
+TESLER = f"""
+  <text x="96" y="32" font-size="9" letter-spacing="1.4" text-anchor="middle" fill="{SUAVE}">PESSOA</text>
+  <text x="264" y="32" font-size="9" letter-spacing="1.4" text-anchor="middle" fill="{ROXO}">SISTEMA</text>
+  <path d="M180 42 V142" stroke="{SUAVE}" stroke-width="1.4" stroke-dasharray="4 5" opacity=".55"/>
+  {''.join(f'<rect x="52" y="{62 + i * 34}" width="88" height="26" rx="9" fill="{SUAVE}" fill-opacity=".16" stroke="{SUAVE}" stroke-width="1.5"/>' for i in range(2))}
+  {''.join(f'<rect x="220" y="{52 + i * 34}" width="88" height="26" rx="9" fill="{ROXO}" fill-opacity=".16" stroke="{ROXO}" stroke-width="1.5"/>' for i in range(3))}
+  <g class="seta"><path d="M148 100 h22 m-7 -5 l7 5 -7 5" fill="none" stroke="{ROSA}" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <text x="180" y="162" font-size="9" letter-spacing="1.4" text-anchor="middle" fill="{SUAVE}">O TRABALHO MUDA DE LADO, NÃO SOME</text>
+"""
+
+PRAGNANZ = f"""
+  <g fill="none" stroke="{SUAVE}" stroke-width="1.8" opacity=".75">
+    <circle cx="74" cy="68" r="26"/><circle cx="104" cy="84" r="26"/><circle cx="98" cy="50" r="20"/>
+  </g>
+  <g class="seta"><path d="M164 76 h32 m-10 -7 l10 7 -10 7" fill="none" stroke="{ROSA}" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <circle cx="272" cy="76" r="34" fill="{ROXO}" fill-opacity=".18" stroke="{ROXO}" stroke-width="2.4"/>
+  <circle class="pulso" cx="272" cy="76" r="34" fill="none" stroke="{ROXO}" stroke-width="2"/>
+  <text x="180" y="150" font-size="9" letter-spacing="1.4" text-anchor="middle" fill="{SUAVE}">O OLHO PROCURA A FORMA MAIS SIMPLES</text>
+"""
+
+SIMILARIDADE = f"""
+  {''.join(f'<circle cx="{62 + (i % 6) * 48}" cy="{46 + (i // 6) * 30}" r="9" fill="{ROXO if (i % 6) in (1, 4) else SUAVE}" fill-opacity="{1 if (i % 6) in (1, 4) else .3}"/>' for i in range(24))}
+  <text x="180" y="156" font-size="9" letter-spacing="1.4" text-anchor="middle" fill="{SUAVE}">A COR AGRUPA EM COLUNAS, SEM UMA LINHA SEQUER</text>
+"""
+
+REGIAO_COMUM = f"""
+  <rect x="30" y="50" width="152" height="64" rx="18" fill="{ROXO}" fill-opacity=".1" stroke="{ROXO}" stroke-width="1.8"/>
+  {''.join(f'<circle cx="{60 + i * 44}" cy="82" r="10" fill="{ROXO}"/>' for i in range(3))}
+  {''.join(f'<circle cx="{216 + i * 44}" cy="82" r="10" fill="{SUAVE}" fill-opacity=".4"/>' for i in range(3))}
+  <text x="180" y="150" font-size="9" letter-spacing="1.4" text-anchor="middle" fill="{SUAVE}">A MOLDURA CRIA UM GRUPO SOZINHA</text>
+"""
+
+DOHERTY = f"""
+  <rect x="40" y="50" width="252" height="14" rx="7" fill="{SUAVE}" fill-opacity=".18"/>
+  <rect class="enche" x="40" y="50" width="66" height="14" rx="7" fill="{VERDE}"/>
+  <circle cx="122" cy="57" r="11" fill="{VERDE}" fill-opacity=".18"/>
+  <path d="M116 57 l4.4 4.6 8 -9" fill="none" stroke="{VERDE}" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="332" y="61" font-size="10" text-anchor="end" fill="{VERDE}">0,3s</text>
+  <rect x="40" y="100" width="252" height="14" rx="7" fill="{SUAVE}" fill-opacity=".18"/>
+  <rect class="enche" x="40" y="100" width="214" height="14" rx="7" fill="{ROSA}"/>
+  <circle cx="270" cy="107" r="11" fill="{ROSA}" fill-opacity=".18"/>
+  <path d="M265 102 l10 10 M275 102 l-10 10" fill="none" stroke="{ROSA}" stroke-width="2.2" stroke-linecap="round"/>
+  <text x="332" y="111" font-size="10" text-anchor="end" fill="{ROSA}">2,4s</text>
+  <text x="180" y="150" font-size="9" letter-spacing="1.4" text-anchor="middle" fill="{SUAVE}">PASSOU DE 0,4s, A ATENÇÃO JÁ FOI EMBORA</text>
+"""
+
+POSICAO_SERIAL = f"""
+  {''.join(f'<rect x="66" y="{34 + i * 18}" width="234" height="12" rx="6" fill="{SUAVE}" fill-opacity=".22"/>' for i in range(1, 6))}
+  <rect x="66" y="34" width="234" height="12" rx="6" fill="{ROXO}"/>
+  <rect x="66" y="124" width="234" height="12" rx="6" fill="{ROXO}"/>
+  <circle class="pulso" cx="48" cy="40" r="6" fill="none" stroke="{ROXO}" stroke-width="1.8"/>
+  <circle cx="48" cy="40" r="4.5" fill="{ROXO}"/>
+  <circle cx="48" cy="130" r="4.5" fill="{ROXO}"/>
+  <text x="180" y="160" font-size="9" letter-spacing="1.4" text-anchor="middle" fill="{SUAVE}">O COMEÇO E O FIM SÃO O QUE FICA</text>
+"""
+
+ESTETICA = f"""
+  <g opacity=".5">
+    <rect x="34" y="32" width="130" height="96" rx="10" fill="none" stroke="{SUAVE}" stroke-width="1.8"/>
+    <rect x="48" y="48" width="70" height="10" rx="3" fill="{SUAVE}"/>
+    <rect x="48" y="66" width="102" height="7" rx="3" fill="{SUAVE}" opacity=".6"/>
+    <rect x="48" y="80" width="86" height="7" rx="3" fill="{SUAVE}" opacity=".6"/>
+    <rect x="48" y="98" width="64" height="18" rx="4" fill="{SUAVE}" opacity=".5"/>
+  </g>
+  <g>
+    <rect x="196" y="32" width="130" height="96" rx="18" fill="{ROXO}" fill-opacity=".08" stroke="{ROXO}" stroke-width="1.8"/>
+    <rect x="212" y="48" width="70" height="10" rx="5" fill="{ROXO}"/>
+    <rect x="212" y="66" width="102" height="7" rx="3.5" fill="{ROXO}" opacity=".45"/>
+    <rect x="212" y="80" width="86" height="7" rx="3.5" fill="{ROXO}" opacity=".45"/>
+    <rect x="212" y="98" width="64" height="18" rx="9" fill="{ROXO}"/>
+  </g>
+  <g class="bate" style="transform-origin:328px 38px">
+    <path d="M328 44 c-5.6 -3.8 -8.2 -6.9 -8.2 -10 a4 4 0 0 1 8.2 -1.9 a4 4 0 0 1 8.2 1.9 c0 3.1 -2.6 6.2 -8.2 10 z" fill="{ROSA}"/>
+  </g>
+  <text x="180" y="152" font-size="9" letter-spacing="1.4" text-anchor="middle" fill="{SUAVE}">O MESMO FLUXO PARECE MAIS FÁCIL NO BONITO</text>
+"""
+
+OCCAM = f"""
+  {''.join(f'<rect x="98" y="{34 + i * 22}" width="176" height="14" rx="7" fill="{ROXO}" fill-opacity=".16" stroke="{ROXO}" stroke-width="1.4"/>' for i in range(3))}
+  {''.join(f'<rect x="98" y="{100 + i * 22}" width="176" height="14" rx="7" fill="none" stroke="{SUAVE}" stroke-width="1.4" stroke-dasharray="4 4" opacity=".6"/>' for i in range(2))}
+  <g stroke="{ROSA}" stroke-width="2" stroke-linecap="round" opacity=".8">
+    <path d="M70 100 l16 16 M86 100 l-16 16"/>
+    <path d="M70 122 l16 16 M86 122 l-16 16"/>
+  </g>
+  <text x="180" y="158" font-size="9" letter-spacing="1.4" text-anchor="middle" fill="{SUAVE}">TIRE ATÉ COMEÇAR A FAZER FALTA</text>
+"""
+
+STATUS = f"""
+  <rect x="40" y="42" width="196" height="14" rx="7" fill="{SUAVE}" fill-opacity=".18"/>
+  <rect class="enche" x="40" y="42" width="90" height="14" rx="7" fill="{ROXO}"/>
+  <text x="248" y="53" font-size="10" fill="{ROXO}">46%</text>
+  <g transform="translate(302,49)">
+    <circle r="14" fill="none" stroke="{SUAVE}" stroke-width="3" opacity=".28"/>
+    <path class="curva" d="M0 -14 a14 14 0 0 1 14 14" fill="none" stroke="{ROXO}" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <rect x="40" y="88" width="280" height="40" rx="14" fill="{VERDE}" fill-opacity=".12" stroke="{VERDE}" stroke-width="1.5"/>
+  <circle cx="68" cy="108" r="11" fill="{VERDE}" fill-opacity=".2"/>
+  <path d="M62 108 l4.4 4.6 8 -9" fill="none" stroke="{VERDE}" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="90" y="102" width="124" height="9" rx="4.5" fill="{VERDE}" opacity=".5"/>
+  <rect x="90" y="116" width="82" height="7" rx="3.5" fill="{VERDE}" opacity=".3"/>
+  <text x="180" y="156" font-size="9" letter-spacing="1.4" text-anchor="middle" fill="{SUAVE}">A PESSOA NUNCA FICA NO ESCURO</text>
+"""
+
+PREVENIR = f"""
+  <rect x="30" y="44" width="142" height="34" rx="10" fill="none" stroke="{VERDE}" stroke-width="1.8"/>
+  <rect x="44" y="56" width="76" height="9" rx="4.5" fill="{VERDE}" opacity=".45"/>
+  <circle cx="150" cy="61" r="9" fill="{VERDE}" fill-opacity=".2"/>
+  <path d="M145 61 l3.6 3.8 6.6 -7.4" fill="none" stroke="{VERDE}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="30" y="98" font-size="8.5" letter-spacing="1.2" fill="{VERDE}">AVISA ENQUANTO SE DIGITA</text>
+  <rect x="196" y="44" width="142" height="34" rx="10" fill="none" stroke="{ROSA}" stroke-width="1.8"/>
+  <rect x="210" y="56" width="76" height="9" rx="4.5" fill="{ROSA}" opacity=".45"/>
+  <circle cx="316" cy="61" r="9" fill="{ROSA}" fill-opacity=".2"/>
+  <path d="M312 57 l8 8 M320 57 l-8 8" fill="none" stroke="{ROSA}" stroke-width="2" stroke-linecap="round"/>
+  <text x="196" y="98" font-size="8.5" letter-spacing="1.2" fill="{ROSA}">RECLAMA DEPOIS DE ENVIAR</text>
+  <text x="180" y="142" font-size="9" letter-spacing="1.4" text-anchor="middle" fill="{SUAVE}">ERRO EVITADO VALE MAIS QUE ERRO EXPLICADO</text>
+"""
+
+RECONHECER = f"""
+  <rect x="32" y="50" width="140" height="34" rx="10" fill="none" stroke="{SUAVE}" stroke-width="1.8" opacity=".65"/>
+  <rect class="cur" x="46" y="58" width="6" height="18" fill="{SUAVE}"/>
+  <text x="102" y="118" font-size="24" font-weight="700" text-anchor="middle" fill="{SUAVE}" opacity=".4">?</text>
+  <rect x="196" y="40" width="142" height="30" rx="10" fill="{ROXO}" fill-opacity=".12" stroke="{ROXO}" stroke-width="1.8"/>
+  <path d="M316 51 l6 7 6 -7" fill="none" stroke="{ROXO}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  {''.join(f'<rect x="196" y="{78 + i * 22}" width="142" height="16" rx="6" fill="{ROXO}" fill-opacity="{.2 - i * 0.05}"/>' for i in range(3))}
+  <text x="180" y="152" font-size="9" letter-spacing="1.4" text-anchor="middle" fill="{SUAVE}">MOSTRE AS OPÇÕES EM VEZ DE COBRAR MEMÓRIA</text>
+"""
+
+DESFAZER = f"""
+  <rect x="60" y="36" width="240" height="34" rx="10" fill="{SUAVE}" fill-opacity=".16"/>
+  <rect x="76" y="48" width="120" height="10" rx="5" fill="{SUAVE}" opacity=".5"/>
+  <g stroke="{ROSA}" stroke-width="2" stroke-linecap="round">
+    <path d="M266 47 l12 12 M278 47 l-12 12"/>
+  </g>
+  <rect x="60" y="90" width="240" height="42" rx="14" fill="{ROXO}" fill-opacity=".14" stroke="{ROXO}" stroke-width="1.8"/>
+  <path d="M98 111 h-14 m6 -6 l-6 6 6 6" fill="none" stroke="{ROXO}" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="114" y="115" font-size="11" letter-spacing="1.6" fill="{ROXO}">DESFAZER</text>
+  <text x="180" y="158" font-size="9" letter-spacing="1.4" text-anchor="middle" fill="{SUAVE}">TODA AÇÃO PRECISA DE UM CAMINHO DE VOLTA</text>
+"""
+
+# A ordem aqui é a ordem em que as leis aparecem, um dia após o outro.
+# Alterna lei clássica e heurística de perto para dois dias seguidos nunca
+# soarem parecidos.
 LEIS = [
     ("LEI DE FITTS",
      ["Quanto maior e mais perto o alvo, mais rápido a mão chega nele.",
       "Botão importante não merece ser pequeno nem ficar escondido",
       "num canto que ninguém alcança."], FITTS),
+    ("VISIBILIDADE DO STATUS",
+     ["A interface deve dizer o tempo todo o que está acontecendo.",
+      "Barra de progresso, spinner e confirmação não são enfeite:",
+      "são o que impede a pessoa de achar que travou."], STATUS),
     ("LEI DE HICK",
      ["Cada opção a mais na tela é um segundo a mais de decisão.",
       "Menu enxuto não é menu pobre: é menu que respeita o tempo",
       "de quem está do outro lado."], HICK),
-    ("LEI DE JAKOB",
-     ["As pessoas passam a maior parte do tempo em outros sites.",
-      "Elas esperam que o seu funcione igual. Originalidade fica",
-      "na identidade visual, não no lugar do carrinho."], JAKOB),
-    ("LEI DE MILLER",
-     ["A memória de trabalho segura mais ou menos sete coisas.",
-      "Agrupar é o truque: três blocos de dois cansam menos",
-      "que sete itens soltos na mesma lista."], MILLER),
-    ("EFEITO VON RESTORFF",
-     ["O item diferente do resto é o único que fica na memória.",
-      "Se tudo está em destaque, nada está. Escolha um botão",
-      "para gritar e deixe os outros sussurrarem."], VON_RESTORFF),
-    ("EFEITO ZEIGARNIK",
-     ["Tarefa começada incomoda até terminar.",
-      "Mostrar o progresso não é enfeite: é o que faz a pessoa",
-      "voltar para fechar o que ficou pela metade."], ZEIGARNIK),
-    ("REGRA DO PICO-FIM",
-     ["A lembrança de uma experiência não é a média dela.",
-      "É o momento mais intenso somado ao final. Capriche na",
-      "confirmação do pedido, e não só no formulário."], PICO_FIM),
     ("LEI DA PROXIMIDADE",
      ["O que está perto parece do mesmo grupo, mesmo sem título.",
       "Antes de desenhar mais uma linha divisória, tente",
       "só mexer no espaçamento."], PROXIMIDADE),
+    ("EFEITO ZEIGARNIK",
+     ["Tarefa começada incomoda até terminar.",
+      "Mostrar o progresso não é enfeite: é o que faz a pessoa",
+      "voltar para fechar o que ficou pela metade."], ZEIGARNIK),
+    ("LEI DE TESLER",
+     ["Toda complexidade que não dá para eliminar alguém carrega.",
+      "A escolha é sua: ou o sistema resolve, ou a conta sobra",
+      "para quem está usando."], TESLER),
+    ("LEI DE JAKOB",
+     ["As pessoas passam a maior parte do tempo em outros sites.",
+      "Elas esperam que o seu funcione igual. Originalidade fica",
+      "na identidade visual, não no lugar do carrinho."], JAKOB),
+    ("LIMIAR DE DOHERTY",
+     ["Acima de 0,4 segundo de espera, a atenção começa a vazar.",
+      "Abaixo disso a pessoa entra em ritmo com a interface e",
+      "produz mais sem perceber."], DOHERTY),
+    ("LEI DE MILLER",
+     ["A memória de trabalho segura mais ou menos sete coisas.",
+      "Agrupar é o truque: três blocos de dois cansam menos",
+      "que sete itens soltos na mesma lista."], MILLER),
+    ("PREVENÇÃO DE ERROS",
+     ["Mensagem de erro boa é a que nunca precisou aparecer.",
+      "Validar enquanto a pessoa digita evita o formulário que",
+      "só reclama depois de tudo preenchido."], PREVENIR),
+    ("EFEITO VON RESTORFF",
+     ["O item diferente do resto é o único que fica na memória.",
+      "Se tudo está em destaque, nada está. Escolha um botão",
+      "para gritar e deixe os outros sussurrarem."], VON_RESTORFF),
+    ("LEI DA SIMILARIDADE",
+     ["Elementos parecidos são lidos como um conjunto, mesmo",
+      "espalhados pela tela. Cor, forma e tamanho agrupam",
+      "sem precisar de moldura nem de rótulo."], SIMILARIDADE),
+    ("REGRA DO PICO-FIM",
+     ["A lembrança de uma experiência não é a média dela.",
+      "É o momento mais intenso somado ao final. Capriche na",
+      "confirmação do pedido, e não só no formulário."], PICO_FIM),
+    ("RECONHECER, NÃO LEMBRAR",
+     ["Reconhecer é barato, lembrar é caro.",
+      "Deixe as opções à vista em vez de exigir que a pessoa",
+      "guarde na cabeça o que viu na tela anterior."], RECONHECER),
+    ("LEI DE PRÄGNANZ",
+     ["Diante de uma forma complexa, o olho procura a versão",
+      "mais simples possível. Formas limpas são entendidas",
+      "mais rápido e cansam menos."], PRAGNANZ),
+    ("CONTROLE E LIBERDADE",
+     ["Gente erra, e erra o tempo todo.",
+      "Toda ação precisa de um caminho de volta bem visível:",
+      "desfazer, cancelar, sair sem perder o que já foi feito."], DESFAZER),
+    ("EFEITO DE POSIÇÃO SERIAL",
+     ["De uma lista, ficam o primeiro e o último item.",
+      "O que estiver no meio some da memória, então coloque",
+      "o que importa nas pontas."], POSICAO_SERIAL),
+    ("LEI DA REGIÃO COMUM",
+     ["Um contorno em volta cria um grupo na hora, mesmo que",
+      "os elementos estejam longe uns dos outros.",
+      "É o agrupamento mais forte da Gestalt."], REGIAO_COMUM),
+    ("EFEITO ESTÉTICA-USABILIDADE",
+     ["Interface bonita é percebida como mais fácil de usar,",
+      "mesmo quando o fluxo é idêntico. O capricho visual",
+      "compra paciência para os tropeços que sobrarem."], ESTETICA),
+    ("NAVALHA DE OCCAM",
+     ["Entre duas soluções que resolvem, fique com a mais simples.",
+      "Vá tirando elemento até começar a fazer falta:",
+      "o que sobrou era o necessário."], OCCAM),
 ]
 
 
-def semente(data):
-    """Hash estavel a partir de AAAAMMDD - o mesmo dia, a mesma lei."""
-    n = int(data.strftime("%Y%m%d"))
-    n = (n * 1103515245 + 12345) & 0x7FFFFFFF
-    n ^= n >> 13
-    return (n * 2654435761) & 0x7FFFFFFF
+def indice(data):
+    """Rotação fixa: uma lei por dia, na ordem da lista.
+
+    Usa o número ordinal do dia, que anda de um em um. Assim nenhuma lei
+    repete antes de todas as outras terem aparecido, e o ciclo inteiro leva
+    exatamente len(LEIS) dias. O sorteio anterior era aleatório com
+    reposição: repetia a mesma lei em dias seguidos e deixava outras de fora
+    por semanas.
+    """
+    return data.toordinal() % len(LEIS)
 
 
 def montar(agora):
-    nome, frases, diagrama = LEIS[semente(agora) % len(LEIS)]
+    nome, frases, diagrama = LEIS[indice(agora)]
+    # o quadro do diagrama comeca em x=600; nome comprido encolhe para nao encostar
+    corpo_nome = 30 if len(nome) <= 26 else 25
     linhas = "".join(
         f'<text x="40" y="{146 + i * 21}" font-size="12.5" fill="{SUAVE}">{t}</text>'
         for i, t in enumerate(frases))
@@ -225,7 +423,7 @@ def montar(agora):
         <circle class="vivo" cx="45" cy="44" r="4.5" fill="#16a34a"/>
         <text x="59" y="48" font-size="10.5" letter-spacing="3" fill="{ROXO}">LEI DE UX DO DIA &#183; {data_br}</text>
       </g>
-      <text class="sobe s2" x="38" y="104" font-size="30" font-weight="700" letter-spacing="1.2" fill="{TINTA}">{nome}</text>
+      <text class="sobe s2" x="38" y="104" font-size="{corpo_nome}" font-weight="700" letter-spacing="1.2" fill="{TINTA}">{nome}</text>
       <rect class="sobe s3" x="40" y="118" width="80" height="4" rx="2" fill="url(#lRegua)"/>
       <g class="sobe s3">{linhas}</g>
       <text class="sobe s4" x="40" y="216" font-size="9" letter-spacing="1.4" fill="#6b7280" font-family="SFMono-Regular, Consolas, Menlo, monospace">ATUALIZADA AUTOMATICAMENTE TODA MADRUGADA &#183; UMA LEI DIFERENTE POR DIA</text>
